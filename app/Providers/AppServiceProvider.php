@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use Illuminate\Facades\Schema;
+use Illuminate\Support\facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
