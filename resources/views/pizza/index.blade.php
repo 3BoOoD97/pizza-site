@@ -5,12 +5,12 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">All Pizza</div>
+                <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
-                    @if (session('message'))
+                    @if (session('status'))
                         <div class="alert alert-success" role="alert">
-                            {{ session('message') }}
+                            {{ session('status') }}
                         </div>
                     @endif
 
