@@ -7,7 +7,6 @@
     <div class="col-md-4">
             <div class="card">
                 <div class="card-header">{{ __('Menu') }}</div>
-
                 <div class="card-body">
              <ul>
                  <a herf="" class="list-group-item list-group-item-action"> View </a>
@@ -22,7 +21,15 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Pizza') }}</div>
+                @if(count($errors)>0)
+                <div class="alert alert-danger">
+                @foreach ($errors->all() as $error)
+                    <p> {{$error}} <p>
+                @endforeach
+            </div>
+                @endif
 
+                <form action="{{route('pizza.store')}}" method="post"> @csrf
                 <div class="card-body">
                  <div class="form-group">
                      <label for="name">Pizza Name</label>
@@ -36,16 +43,16 @@
                 </br>
                 <div class="form-inline">
                     <label>Pizza price($)</label>
-                    <input type="number" class="form-control" placeholder="small pizza price">
-                    <input type="number" class="form-control" placeholder="medium pizza price">
-                    <input type="number" class="form-control" placeholder="large pizza price">
+                    <input type="number" name="small_pizza_price" class="form-control" placeholder="small pizza price">
+                    <input type="number" name="medium_pizza_price" class="form-control" placeholder="medium pizza price">
+                    <input type="number" name="large_pizza_price" class="form-control" placeholder="large pizza price">
                 </div>
                 </br>
               
 
                 <div class="form-group">
                     <label for="description">Category</label>
-                    <select class="form-control">
+                    <select class="form-control" name="category">
                     <option value="Cheese">Cheese </option>  
                     <option value="Veggie">Veggie</option>     
                     <option value="Pepperoni">Pepperoni </option>     
@@ -61,7 +68,7 @@
                 </br>
                 <div class="form-group">
                   <label>Image</label>
-                  <input type="file" class="form-control" name="image"> 
+                  <input type="file" name="image" class="form-control" name="image"> 
                 </div>
 
                 <div class="form-group text-center"> 
