@@ -6,12 +6,11 @@
 
     <div class="col-md-4">
             <div class="card">
-                <div class="card-header">{{ __('Menu') }}</div>
+                <div class="card-header">Menu</div>
                 <div class="card-body">
-             <ul>
-                 <a herf="" class="list-group-item list-group-item-action"> View </a>
-                 <a herf="" class="list-group-item list-group-item-action"> Create </a>
-
+             <ul class="list-group">
+                 <a href="{{route('pizza.index')}}" class="list-group-item list-group-item-action"> View </a>
+                 <a href="{{route('pizza.create')}}" class="list-group-item list-group-item-action"> Create </a>
                 </ul>
                 </div>
             </div>
