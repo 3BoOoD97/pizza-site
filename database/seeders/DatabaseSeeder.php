@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Http\Models\User;
+use App\Models\Pizza;
+use App\Models\User;
+
 class DatabaseSeeder extends Seeder
 {
     /**
