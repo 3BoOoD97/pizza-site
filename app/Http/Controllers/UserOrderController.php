@@ -13,7 +13,7 @@ class UserOrderController extends Controller
      */
     public function index()
     {
-        $orders = Order::orderBy('id', 'DESC')->get();
+        $orders = Order::orderBy('id','DESC')->get();
         return view('order.index', compact('orders'));
     }
 
@@ -87,6 +87,5 @@ class UserOrderController extends Controller
         $order = order::find($id);
         Order::where('id',$id)->update(['status'=>$request->status]);
         return back();
-
     }
 }
