@@ -84,7 +84,7 @@ class UserOrderController extends Controller
     }
 
     public function changeStatus(Request $request, $id){
-        $order = Order::find($id);
+        $order = order::find($id);
         Order::where('id',$id)->update(['status'=>$request->status]);
         return back();
 
