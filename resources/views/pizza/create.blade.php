@@ -52,7 +52,13 @@
                     <input type="number" name="large_pizza_price" class="form-control" placeholder="large pizza price">
                 </div>
                 </br>
-              
+
+            </br>
+            <div class="form-inline">
+                <label>KCAL</label>
+                <input type="number" name="kcal" class="form-control" placeholder="KCAL">
+            </div>
+            </br>
 
                 <div class="form-group">
                     <label for="description">Category</label>

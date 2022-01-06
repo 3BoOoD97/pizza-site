@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\PizzaStoreRequest;
 use App\Http\Requests\PizzaUpdateRequest;
-
 use App\Models\Pizza;
-class PizzaController extends Controller
+
+class PizzasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -28,6 +28,7 @@ class PizzaController extends Controller
     public function create()
     {
         return view('pizza.create');
+
     }
 
     /**

@@ -67,6 +67,67 @@
                             <td><a href="{{route('pizza.edit', $pizza->id)}}"><button class="btn btn-primary">Edit</button></a></td>
                             <td><button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal{{$pizza->id}}">Delete</button></td>
 
+
+
+
+
+
+                            <figure class="pizza">
+                              <div class="pizza__hero">
+                                <img src="{{Storage::url($pizza->image)}}" alt="Pizza" class="pizza__img">
+                              </div>
+                              <div class="pizza__content">
+                                <div class="pizza__title">
+                                  <h1 class="pizza__heading">{{$pizza->name}} 👌</h1>
+                                  <div class="pizza__tag pizza__tag--1">#{{$pizza->category}}</div>
+                                  <div class="pizza__tag pizza__tag--2">#italian</div>
+                                </div>
+                                <p class="pizza__description">{{$pizza->description}}</p>
+                                <div class="pizza__details">
+                                  <p class="pizza__detail"><span class="emoji">🍕</span>850 kcal</p>
+                                  <p class="pizza__detail"><span class="emoji">⏱</span>30 min</p>
+                                  <p class="pizza__detail"><span class="emoji">⭐️</span>4.7 / 5</p>
+                                </div>
+                              </div>
+                              <div class="pizza__price">$11.99</div>
+                            </figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                             <!-- Modal -->
 <div class="modal fade" id="exampleModal{{$pizza->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <form action="{{route('pizza.destroy',$pizza->id)}}" method="POST">@csrf
